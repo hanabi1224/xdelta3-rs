@@ -15,8 +15,11 @@ exclude = [
 maintenance = { status = "experimental" }
 
 [dependencies]
-libc = "0.2.55"
+libc = "0.2"
 
 [build-dependencies]
 cc = "1.0"
-rand = "0.6.5"
+rand = "0.7"
+
+[lib]
+crate-type = ["lib", "cdylib"]

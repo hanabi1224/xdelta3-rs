@@ -13,25 +13,25 @@
 
 extern crate libc;
 
-use libc::{c_int, c_uint, uint8_t};
+use libc::{c_int, c_uint};
 
 extern "C" {
     fn xd3_encode_memory(
-        input: *const uint8_t,
+        input: *const u8,
         input_size: c_uint,
-        source: *const uint8_t,
+        source: *const u8,
         source_size: c_uint,
-        output_buffer: *mut uint8_t,
+        output_buffer: *mut u8,
         output_size: *mut c_uint,
         avail_output: c_uint,
         flags: c_int,
     ) -> c_int;
     fn xd3_decode_memory(
-        input: *const uint8_t,
+        input: *const u8,
         input_size: c_uint,
-        source: *const uint8_t,
+        source: *const u8,
         source_size: c_uint,
-        output_buffer: *mut uint8_t,
+        output_buffer: *mut u8,
         output_size: *mut c_uint,
         avail_output: c_uint,
         flags: c_int,
