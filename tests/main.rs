@@ -35,5 +35,4 @@ mod tests {
         let patched_data = decode(patch_data.as_slice(), original_data.as_slice()).unwrap();
         assert_eq!(patched_data, correct_data);
     }
-
 }
