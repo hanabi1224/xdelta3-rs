@@ -38,6 +38,30 @@ extern "C" {
     ) -> c_int;
 }
 
+#[no_mangle]
+pub extern fn xd3_encode_memory_rs(
+    input: *const u8,
+    input_size: c_uint,
+    source: *const u8,
+    source_size: c_uint,
+    output_buffer: *mut u8,
+    output_size: *mut c_uint,
+    avail_output: c_uint,
+    flags: c_int,
+) -> c_int;
+
+#[no_mangle]
+pub extern fn xd3_decode_memory_rs(
+    input: *const u8,
+    input_size: c_uint,
+    source: *const u8,
+    source_size: c_uint,
+    output_buffer: *mut u8,
+    output_size: *mut c_uint,
+    avail_output: c_uint,
+    flags: c_int,
+) -> c_int;
+
 /// Function to generate the difference data
 ///
 /// This function is used to generate the difference data.
